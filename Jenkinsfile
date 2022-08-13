@@ -69,9 +69,9 @@ pipeline {
             }
         }
         stage("Acceptance test codeception") {
-            // steps {
-            //     sh "vendor/bin/codecept run"
-            // }
+            steps {
+             //   sh "vendor/bin/codecept run"
+            }
             post {
                 always {
                     sh "docker stop laravel8cd"
