@@ -70,7 +70,8 @@ pipeline {
         }
         stage("Acceptance test codeception") {
             steps {
-                sh "vendor/bin/codecept run"
+                sleep 20
+                sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
             }
             post {
                 always {
