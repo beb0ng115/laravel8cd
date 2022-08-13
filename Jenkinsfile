@@ -70,7 +70,7 @@ pipeline {
         }
         stage("Acceptance test codeception") {
             steps {
-             //   sh "vendor/bin/codecept run"
+                sh "vendor/bin/codecept run"
             }
             post {
                 always {
